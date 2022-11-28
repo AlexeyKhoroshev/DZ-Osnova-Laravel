@@ -17,7 +17,7 @@ Route::get ('/categories/{id}/edit',     'CategoryController@edit');            
 Route::get ('/categories/{id}/products', 'CategoryController@showProducts');             //показать список товаров в категории с номером id
 
 Route::put ('/categories/{id}',          'CategoryController@update');                   //внести в бд изменения категории
-Route::post('/categories',               'CategoryController@store');                    //добавить категорию
+Route::post('/categories',               'CategoryController@store');                    //добавить категорию в БД
 
 //-------------------------------товары--------------------------------------------
 
@@ -26,7 +26,7 @@ Route::get ('/products',                 'ProductController@index');            
 Route::get ('/products/{id}/edit',       'ProductController@edit');                      //показать страницу редактирования товаров
 Route::get ('/products/{id}',            'ProductController@show');                      //показать товар с номером id
 
-Route::post  ('/products',               'ProductController@store');
+Route::post  ('/products',               'ProductController@store');                     //добавить продукт в БД
 Route::put   ('/products/{id}',          'ProductController@update');                    //внести в бд изменения инфы о товарех
-Route::delete('/products/{id}',          'ProductController@destroy');
+Route::delete('/products/{id}',          'ProductController@destroy');                   //удалить продукт
 
